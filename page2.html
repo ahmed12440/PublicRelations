@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2196F3; /* Blue color */
+            color: #fff; /* White text for contrast */
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.2em;
+            margin: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        .section-title {
+            font-size: 1.6em;
+            margin: 15px 0;
+            color: #2196F3;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .section-content {
+            padding: 15px;
+            color: #555;
+            border-left: 4px solid #2196F3;
+            background-color: #f1f9ff;
+            border-radius: 5px;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .highlight {
+            background-color: #e0f7fa;
+            padding: 5px;
+            border-left: 5px solid #00796B;
+            margin: 10px 0;
+        }
+        ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        ul li {
+            line-height: 1.8;
+        }
+        .language-select {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .section-title:hover {
+            transform: scale(1.05);
+        }
+        .section-content:hover {
+            background-color: #e8f5e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="main-title">Business Management</h1>
+        <p id="intro">Business management is the process of organizing and coordinating activities within an organization to achieve its goals efficiently and effectively.</p>
+    </div>
+    
+    <div class="container">
+        <div class="language-select">
+            <label for="language">Select Language: </label>
+            <select id="language" onchange="switchLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+                <option value="ru">Russian</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+            </select>
+        </div>
+
+        <div>
+            <div class="section-title" id="definition-title">1. Definition of Business Management</div>
+            <div class="section-content" id="definition">
+                <p id="definition-content">Business management is a set of activities that include planning, organizing, leading, and controlling to achieve an organization’s objectives in ways that ensure efficiency and effectiveness.</p>
+            </div>
+
+            <div class="section-title" id="importance-title">2. Importance of Business Management</div>            
+            <div class="section-content" id="importance">
+                <p id="importance-content">Business management helps in improving productivity, enhancing performance, and determining the strategic directions for the organization to ensure its success in competitive markets.</p>
+            </div>
+
+            <div class="section-title" id="principles-title">3. Basic Principles of Business Management</div>
+            <div class="section-content" id="principles">
+                <ul id="principles-content">
+                    <li><b>Planning:</b> Setting goals and creating plans to achieve them.</li>
+                    <li><b>Organizing:</b> Arranging resources and activities in a coordinated way to ensure workflow.</li>
+                    <li><b>Leading:</b> Guiding and motivating individuals to perform their tasks effectively.</li>
+                    <li><b>Controlling:</b> Monitoring performance and adjusting plans as needed.</li>
+                </ul>
+            </div>
+
+            <div class="section-title" id="strategies-title">4. Business Management Strategies</div>
+            <div class="section-content" id="strategies">
+                <p id="strategies-content">Business management strategies include various methods to achieve objectives, such as service excellence, quality focus, and growth strategies.</p>
+            </div>
+
+            <div class="section-title" id="applications-title">5. Applications of Business Management</div>
+            <div class="section-content" id="applications">
+                <p id="applications-content">Business management is used in areas like manufacturing, marketing, human resources, and financial services to organize and achieve organizational goals.</p>
+            </div>
+
+            <div class="section-title" id="outcomes-title">6. Outcomes of Effective Business Management</div>
+            <div class="section-content" id="outcomes">
+                <p id="outcomes-content">Through effective management, organizations achieve improvements in productivity, revenue growth, and strengthened relationships with both customers and employees.</p>
+            </div>
+
+            <div class="section-title" id="examples-title">7. Examples of Business Management Projects</div>
+            <div class="section-content" id="examples">
+                <div class="highlight">Example: A supply chain improvement project to reduce costs and increase operational efficiency.</div>
+                <div class="highlight">Example: A marketing campaign to launch a new product and raise awareness in target markets.</div>
+            </div>
+
+            <div class="section-title" id="projects-title">8. Practical Business Management Projects</div>
+            <div class="section-content" id="projects">
+                <ul id="projects-content">
+                    <li>Redesigning production processes to increase efficiency.</li>
+                    <li>Developing digital marketing strategies to reach a larger audience.</li>
+                    <li>Enhancing employee training programs to improve skills.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Business Management",
+                intro: "Business management is the process of organizing and coordinating activities within an organization to achieve its goals efficiently and effectively.",
+                sections: {
+                    definition: {
+                        title: "1. Definition of Business Management",
+                        content: "Business management is a set of activities that include planning, organizing, leading, and controlling to achieve an organization’s objectives in ways that ensure efficiency and effectiveness."
+                    },
+                    importance: {
+                        title: "2. Importance of Business Management",
+                        content: "Business management helps in improving productivity, enhancing performance, and determining the strategic directions for the organization to ensure its success in competitive markets."
+                    },
+                    principles: {
+                        title: "3. Basic Principles of Business Management",
+                        items: [
+                            { title: "Planning:", content: "Setting goals and creating plans to achieve them." },
+                            { title: "Organizing:", content: "Arranging resources and activities in a coordinated way to ensure workflow." },
+                            { title: "Leading:", content: "Guiding and motivating individuals to perform their tasks effectively." },
+                            { title: "Controlling:", content: "Monitoring performance and adjusting plans as needed." }
+                        ]
+                    },
+                    strategies: {
+                        title: "4. Business Management Strategies",
+                        content: "Business management strategies include various methods to achieve objectives, such as service excellence, quality focus, and growth strategies."
+                    },
+                    applications: {
+                        title: "5. Applications of Business Management",
+                        content: "Business management is used in areas like manufacturing, marketing, human resources, and financial services to organize and achieve organizational goals."
+                    },
+                    outcomes: {
+                        title: "6. Outcomes of Effective Business Management",
+                        content: "Through effective management, organizations achieve improvements in productivity, revenue growth, and strengthened relationships with both customers and employees."
+                    },
+                    examples: {
+                        title: "7. Examples of Business Management Projects",
+                        items: [
+                            "Example: A supply chain improvement project to reduce costs and increase operational efficiency.",
+                            "Example: A marketing campaign to launch a new product and raise awareness in target markets."
+                        ]
+                    },
+                    projects: {
+                        title: "8. Practical Business Management Projects",
+                        items: [
+                            "Redesigning production processes to increase efficiency.",
+                            "Developing digital marketing strategies to reach a larger audience.",
+                            "Enhancing employee training programs to improve skills."
+                        ]
+                    }
+                }
+            },
+            ar: {
+                title: "إدارة الأعمال",
+                intro: "إدارة الأعمال هي عملية تنظيم وتنسيق الأنشطة داخل منظمة لتحقيق أهدافها بكفاءة وفعالية.",
+                sections: {
+                    definition: {
+                        title: "1. تعريف إدارة الأعمال",
+                        content: "إدارة الأعمال هي مجموعة من الأنشطة التي تشمل التخطيط والتنظيم والقيادة والرقابة لتحقيق أهداف المنظمة بطرق تضمن الكفاءة والفعالية."
+                    },
+                    importance: {
+                        title: "2. أهمية إدارة الأعمال",
+                        content: "تساعد إدارة الأعمال في تحسين الإنتاجية وتعزيز الأداء وتحديد الاتجاهات الاستراتيجية لضمان نجاح المنظمة في الأسواق التنافسية."
+                    },
+                    principles: {
+                        title: "3. المبادئ الأساسية لإدارة الأعمال",
+                        items: [
+                            { title: "التخطيط:", content: "تحديد الأهداف ووضع الخطط لتحقيقها." },
+                            { title: "التنظيم:", content: "ترتيب الموارد والأنشطة بطريقة منسقة لضمان سير العمل." },
+                            { title: "القيادة:", content: "توجيه وتحفيز الأفراد لأداء مهامهم بفعالية." },
+                            { title: "الرقابة:", content: "مراقبة الأداء وتعديل الخطط حسب الحاجة." }
+                        ]
+                    },
+                    strategies: {
+                        title: "4. استراتيجيات إدارة الأعمال",
+                        content: "تشمل استراتيجيات إدارة الأعمال طرقًا متنوعة لتحقيق الأهداف، مثل التميز في الخدمة والتركيز على الجودة واستراتيجيات النمو."
+                    },
+                    applications: {
+                        title: "5. تطبيقات إدارة الأعمال",
+                        content: "تستخدم إدارة الأعمال في مجالات مثل التصنيع والتسويق والموارد البشرية والخدمات المالية لتنظيم وتحقيق أهداف المنظمة."
+                    },
+                    outcomes: {
+                        title: "6. نتائج إدارة الأعمال الفعالة",
+                        content: "من خلال الإدارة الفعالة، تحقق المنظمات تحسينات في الإنتاجية ونمو الإيرادات وتعزيز العلاقات مع العملاء والموظفين."
+                    },
+                    examples: {
+                        title: "7. أمثلة على مشاريع إدارة الأعمال",
+                        items: [
+                            "مثال: مشروع تحسين سلسلة التوريد لتقليل التكاليف وزيادة الكفاءة التشغيلية.",
+                            "مثال: حملة تسويقية لإطلاق منتج جديد وزيادة الوعي في الأسواق المستهدفة."
+                        ]
+                    },
+                    projects: {
+                        title: "8. مشاريع إدارة الأعمال العملية",
+                        items: [
+                            "إعادة تصميم العمليات الإنتاجية لزيادة الكفاءة.",
+                            "تطوير استراتيجيات التسويق الرقمي للوصول إلى جمهور أكبر.",
+                            "تعزيز برامج تدريب الموظفين لتحسين المهارات."
+                        ]
+                    }
+                }
+            },
+            ru: {
+                title: "Управление бизнесом",
+                intro: "Управление бизнесом — это процесс организации и координации деятельности в организации для достижения ее целей эффективно и результативно.",
+                sections: {
+                    definition: {
+                        title: "1. Определение управления бизнесом",
+                        content: "Управление бизнесом — это набор действий, включающий планирование, организацию, руководство и контроль для достижения целей организации с обеспечением эффективности и результативности."
+                    },
+                    importance: {
+                        title: "2. Важность управления бизнесом",
+                        content: "Управление бизнесом помогает повысить продуктивность, улучшить эффективность и определить стратегические направления для обеспечения успеха организации на конкурентных рынках."
+                    },
+                    principles: {
+                        title: "3. Основные принципы управления бизнесом",
+                        items: [
+                            { title: "Планирование:", content: "Установка целей и создание планов для их достижения." },
+                            { title: "Организация:", content: "Организация ресурсов и деятельности для обеспечения рабочего процесса." },
+                            { title: "Руководство:", content: "Руководство и мотивация сотрудников для эффективного выполнения своих задач." },
+                            { title: "Контроль:", content: "Мониторинг производительности и корректировка планов по мере необходимости." }
+                        ]
+                    },
+                    strategies: {
+                        title: "4. Стратегии управления бизнесом",
+                        content: "Стратегии управления бизнесом включают в себя различные методы достижения целей, такие как высокий уровень обслуживания, ориентация на качество и стратегии роста."
+                    },
+                    applications: {
+                        title: "5. Применение управления бизнесом",
+                        content: "Управление бизнесом используется в таких областях, как производство, маркетинг, человеческие ресурсы и финансовые услуги, для организации и достижения целей организации."
+                    },
+                    outcomes: {
+                        title: "6. Результаты эффективного управления бизнесом",
+                        content: "Благодаря эффективному управлению организации добиваются улучшения в производительности, роста доходов и укрепления отношений как с клиентами, так и с сотрудниками."
+                    },
+                    examples: {
+                        title: "7. Примеры проектов управления бизнесом",
+                        items: [
+                            "Пример: Проект по улучшению цепочки поставок для снижения затрат и повышения операционной эффективности.",
+                            "Пример: Маркетинговая кампания по запуску нового продукта и повышению осведомленности на целевых рынках."
+                        ]
+                    },
+                    projects: {
+                        title: "8. Практические проекты управления бизнесом",
+                        items: [
+                            "Переработка производственных процессов для повышения эффективности.",
+                            "Разработка стратегий цифрового маркетинга для привлечения более широкой аудитории.",
+                            "Улучшение программ обучения сотрудников для повышения квалификации."
+                        ]
+                    }
+                }
+            },
+            de: {
+                title: "Unternehmensführung",
+                intro: "Die Unternehmensführung ist der Prozess der Organisation und Koordination von Aktivitäten innerhalb einer Organisation, um deren Ziele effizient und effektiv zu erreichen.",
+                sections: {
+                    definition: {
+                        title: "1. Definition der Unternehmensführung",
+                        content: "Die Unternehmensführung umfasst eine Reihe von Aktivitäten, die Planung, Organisation, Führung und Kontrolle einschließen, um die Ziele einer Organisation auf effiziente und effektive Weise zu erreichen."
+                    },
+                    importance: {
+                        title: "2. Bedeutung der Unternehmensführung",
+                        content: "Die Unternehmensführung hilft dabei, die Produktivität zu steigern, die Leistung zu verbessern und die strategischen Richtungen für die Organisation festzulegen, um deren Erfolg in wettbewerbsorientierten Märkten sicherzustellen."
+                    },
+                    principles: {
+                        title: "3. Grundprinzipien der Unternehmensführung",
+                        items: [
+                            { title: "Planung:", content: "Ziele festlegen und Pläne zu deren Erreichung erstellen." },
+                            { title: "Organisation:", content: "Ressourcen und Aktivitäten so anzuordnen, dass ein reibungsloser Ablauf gewährleistet ist." },
+                            { title: "Führung:", content: "Mitarbeiter anleiten und motivieren, um ihre Aufgaben effektiv zu erfüllen." },
+                            { title: "Kontrolle:", content: "Leistung überwachen und Pläne bei Bedarf anpassen." }
+                        ]
+                    },
+                    strategies: {
+                        title: "4. Strategien der Unternehmensführung",
+                        content: "Strategien der Unternehmensführung umfassen verschiedene Methoden zur Zielverwirklichung, wie z.B. Serviceexzellenz, Qualitätsfokus und Wachstumsstrategien."
+                    },
+                    applications: {
+                        title: "5. Anwendungen der Unternehmensführung",
+                        content: "Die Unternehmensführung wird in Bereichen wie Produktion, Marketing, Personalwesen und Finanzdienstleistungen eingesetzt, um die organisatorischen Ziele zu erreichen."
+                    },
+                    outcomes: {
+                        title: "6. Ergebnisse einer effektiven Unternehmensführung",
+                        content: "Durch effektives Management erzielen Organisationen Verbesserungen in der Produktivität, Umsatzwachstum und stärken die Beziehungen zu Kunden und Mitarbeitern."
+                    },
+                    examples: {
+                        title: "7. Beispiele für Projekte im Bereich Unternehmensführung",
+                        items: [
+                            "Beispiel: Ein Projekt zur Verbesserung der Lieferkette zur Senkung der Kosten und Steigerung der Betriebseffizienz.",
+                            "Beispiel: Eine Marketingkampagne zur Einführung eines neuen Produkts und zur Erhöhung der Bekanntheit auf den Zielmärkten."
+                        ]
+                    },
+                    projects: {
+                        title: "8. Praktische Projekte der Unternehmensführung",
+                        items: [
+                            "Neugestaltung von Produktionsprozessen zur Effizienzsteigerung.",
+                            "Entwicklung digitaler Marketingstrategien zur Erreichung eines größeren Publikums.",
+                            "Verbesserung von Schulungsprogrammen für Mitarbeiter zur Steigerung ihrer Fähigkeiten."
+                        ]
+                    }
+                }
+            },
+            zh: {
+                title: "商业管理",
+                intro: "商业管理是组织和协调组织内活动的过程，以高效和有效地实现其目标。",
+                sections: {
+                    definition: {
+                        title: "1. 商业管理的定义",
+                        content: "商业管理是一组活动，包括计划、组织、领导和控制，以实现组织的目标，同时确保效率和有效性。"
+                    },
+                    importance: {
+                        title: "2. 商业管理的重要性",
+                        content: "商业管理有助于提高生产力、增强绩效，并为组织确定战略方向，以确保其在竞争市场中的成功。"
+                    },
+                    principles: {
+                        title: "3. 商业管理的基本原则",
+                        items: [
+                            { title: "计划:", content: "设定目标并制定实现目标的计划。" },
+                            { title: "组织:", content: "以协调的方式安排资源和活动，以确保工作流程。" },
+                            { title: "领导:", content: "指导和激励个人有效地执行他们的任务。" },
+                            { title: "控制:", content: "监控绩效并根据需要调整计划。" }
+                        ]
+                    },
+                    strategies: {
+                        title: "4. 商业管理策略",
+                        content: "商业管理策略包括实现目标的各种方法，例如服务卓越、质量关注和增长策略。"
+                    },
+                    applications: {
+                        title: "5. 商业管理的应用",
+                        content: "商业管理用于制造、营销、人力资源和金融服务等领域，以组织和实现组织目标。"
+                    },
+                    outcomes: {
+                        title: "6. 有效商业管理的结果",
+                        content: "通过有效管理，组织在生产力、收入增长和与客户及员工的关系方面取得改善。"
+                    },
+                    examples: {
+                        title: "7. 商业管理项目的例子",
+                        items: [
+                            "示例：改善供应链的项目，以降低成本和提高运营效率。",
+                            "示例：启动新产品的营销活动，提高目标市场的认知度。"
+                        ]
+                    },
+                    projects: {
+                        title: "8. 实际商业管理项目",
+                        items: [
+                            "重新设计生产流程以提高效率。",
+                            "制定数字营销策略以接触更广泛的受众。",
+                            "增强员工培训项目以提高技能。"
+                        ]
+                    }
+                }
+            }
+        };
+
+        // Call switchLanguage to ensure the content is displayed
+        switchLanguage('en');
+
+        function switchLanguage(language) {
+            document.getElementById("main-title").innerText = translations[language].title;
+            document.getElementById("intro").innerText = translations[language].intro;
+
+            // Update sections
+            for (let section in translations[language].sections) {
+                document.getElementById(section + "-title").innerText = translations[language].sections[section].title;
+
+                if (translations[language].sections[section].content) {
+                    document.getElementById(section + "-content").innerText = translations[language].sections[section].content;
+                }
+
+                if (translations[language].sections[section].items) {
+                    const list = document.getElementById(section + "-content");
+                    list.innerHTML = ''; // Clear the current list
+                    translations[language].sections[section].items.forEach(item => {
+                        const listItem = document.createElement("li");
+                        listItem.innerHTML = item.title + " " + item.content; // Append both title and content
+                        list.appendChild(listItem);
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+</html>

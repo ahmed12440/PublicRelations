@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Psychological problems facing the employee and HR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007BFF; /* تغيير اللون إلى الأزرق */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .language-selector {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .problem, .solutions {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            padding: 20px;
+            opacity: 0; /* بداية بخلفية شفافة */
+            transform: translateY(20px); /* بدء الحركة من أسفل */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* انتقالات سلسة */
+        }
+
+        .show {
+            opacity: 1; /* جعل العنصر مرئي */
+            transform: translateY(0); /* إعادته لموقعه الأصلي */
+        }
+
+        h2 {
+            color: #007BFF; /* تغيير اللون إلى الأزرق */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .solution-item {
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 4px solid #007BFF; /* تغيير اللون إلى الأزرق */
+            background-color: #e7f9ff; /* لون خلفية فاتح */
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .solution-item:hover {
+            transform: scale(1.05);
+            background-color: #d0e8ff; /* لون أفتح عند التحويم */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* ظل أزرق */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Psychological problems facing the employee and HR</h1>
+        <p id="header-description">A comprehensive guide to psychological problems</p>
+    </header>
+
+    <main>
+        <div class="language-selector">
+            <label for="language">Select Language:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+        
+        <section class="problem show">
+            <h2 id="problems-title">Psychological problems</h2>
+            <ul id="problems-list">
+                <li>Stress and Anxiety</li>
+                <li>Depression</li>
+                <li>Mental Exhaustion</li>
+                <li>Lack of Motivation</li>
+                <li>Communication Problems</li>
+            </ul>
+        </section>
+
+        <section class="solutions show">
+            <h2 id="solutions-title">Proposed Solutions</h2>
+            <div class="solution-item">
+                <h3 id="solution-1-title">1. Provide a Supportive Work Environment</h3>
+                <p id="solution-1-description">Companies should create a work environment that encourages employees to talk about their mental health issues without fear.</p>
+            </div>
+            <div class="solution-item">
+                <h3 id="solution-2-title">2. Mental Health Support Programs</h3>
+                <p id="solution-2-description">Offer mental health support services such as counseling or workshops related to mental wellness.</p>
+            </div>
+            <div class="solution-item">
+                <h3 id="solution-3-title">3. Stress Management Training</h3>
+                <p id="solution-3-description">Organize training sessions to help employees learn how to manage stress effectively.</p>
+            </div>
+            <div class="solution-item">
+                <h3 id="solution-4-title">4. Promote Effective Communication</h3>
+                <p id="solution-4-description">Encourage employees to communicate with each other and with HR to avoid issues.</p>
+            </div>
+            <div class="solution-item">
+                <h3 id="solution-5-title">5. Encourage Work-Life Balance</h3>
+                <p id="solution-5-description">Encourage employees to take breaks and manage their time to ensure a balance between work and personal life.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 All Public Relationships</p>
+    </footer>
+
+    <script>
+        const translations = {
+            "en": {
+                "header-title": "Psychological problems facing the employee and HR",
+                "header-description": "A comprehensive guide to psychological problems",
+                "problems-title": "Psychological problems",
+                "problems-list": [
+                    "Stress and Anxiety",
+                    "Depression",
+                    "Mental Exhaustion",
+                    "Lack of Motivation",
+                    "Communication Problems"
+                ],
+                "solutions-title": "Proposed Solutions",
+                "solution-1-title": "1. Provide a Supportive Work Environment",
+                "solution-1-description": "Companies should create a work environment that encourages employees to talk about their mental health issues without fear.",
+                "solution-2-title": "2. Mental Health Support Programs",
+                "solution-2-description": "Offer mental health support services such as counseling or workshops related to mental wellness.",
+                "solution-3-title": "3. Stress Management Training",
+                "solution-3-description": "Organize training sessions to help employees learn how to manage stress effectively.",
+                "solution-4-title": "4. Promote Effective Communication",
+                "solution-4-description": "Encourage employees to communicate with each other and with HR to avoid issues.",
+                "solution-5-title": "5. Encourage Work-Life Balance",
+                "solution-5-description": "Encourage employees to take breaks and manage their time to ensure a balance between work and personal life."
+            },
+            "ar": {
+                "header-title": "المشاكل النفسية التي تواجه الموظف وإدارة الموارد البشرية",
+                "header-description": "دليل شامل للمشاكل النفسية",
+                "problems-title": "المشاكل النفسية",
+                "problems-list": [
+                    "التوتر والقلق",
+                    "الاكتئاب",
+                    "الإرهاق العقلي",
+                    "نقص الحافز",
+                    "مشاكل التواصل"
+                ],
+                "solutions-title": "الحلول المقترحة",
+                "solution-1-title": "1. توفير بيئة عمل داعمة",
+                "solution-1-description": "يجب على الشركات خلق بيئة عمل تشجع الموظفين على الحديث عن مشاكل صحتهم النفسية بدون خوف.",
+                "solution-2-title": "2. برامج دعم الصحة النفسية",
+                "solution-2-description": "تقديم خدمات الدعم النفسي مثل الاستشارات أو ورش العمل المتعلقة بالرفاهية النفسية.",
+                "solution-3-title": "3. تدريب إدارة الضغوط",
+                "solution-3-description": "تنظيم جلسات تدريب لمساعدة الموظفين على تعلم كيفية إدارة الضغوط بشكل فعال.",
+                "solution-4-title": "4. تعزيز التواصل الفعال",
+                "solution-4-description": "تشجيع الموظفين على التواصل مع بعضهم البعض ومع إدارة الموارد البشرية لتجنب المشكلات.",
+                "solution-5-title": "5. تشجيع توازن العمل والحياة",
+                "solution-5-description": "تشجيع الموظفين على أخذ فترات راحة وإدارة وقتهم لضمان توازن بين العمل والحياة الشخصية."
+            },
+            "de": {
+                "header-title": "Psychische Probleme von Mitarbeitern und HR",
+                "header-description": "Ein umfassender Leitfaden zu psychischen Problemen",
+                "problems-title": "Psychische Probleme",
+                "problems-list": [
+                    "Stress und Angst",
+                    "Depression",
+                    "Mentale Erschöpfung",
+                    "Mangel an Motivation",
+                    "Kommunikationsprobleme"
+                ],
+                "solutions-title": "Vorgeschlagene Lösungen",
+                "solution-1-title": "1. Bereitstellung eines unterstützenden Arbeitsumfelds",
+                "solution-1-description": "Unternehmen sollten ein Arbeitsumfeld schaffen, das die Mitarbeiter ermutigt, ohne Angst über ihre psychischen Probleme zu sprechen.",
+                "solution-2-title": "2. Programme zur Unterstützung der psychischen Gesundheit",
+                "solution-2-description": "Angebot von Unterstützungsdiensten für die psychische Gesundheit, wie z. B. Beratungen oder Workshops zur psychischen Gesundheit.",
+                "solution-3-title": "3. Stressmanagement-Training",
+                "solution-3-description": "Organisieren Sie Schulungen, um den Mitarbeitern zu helfen, wie man Stress effektiv bewältigt.",
+                "solution-4-title": "4. Effektive Kommunikation fördern",
+                "solution-4-description": "Mitarbeiter ermutigen, miteinander und mit HR zu kommunizieren, um Probleme zu vermeiden.",
+                "solution-5-title": "5. Work-Life-Balance fördern",
+                "solution-5-description": "Mitarbeiter ermutigen, Pausen einzulegen und ihre Zeit zu verwalten, um ein Gleichgewicht zwischen Arbeit und Privatleben sicherzustellen."
+            },
+            "ru": {
+                "header-title": "Психологические проблемы, с которыми сталкиваются сотрудники и HR",
+                "header-description": "Всеобъемлющее руководство по психологическим проблемам",
+                "problems-title": "Психологические проблемы",
+                "problems-list": [
+                    "Стресс и тревога",
+                    "Депрессия",
+                    "Умственное истощение",
+                    "Отсутствие мотивации",
+                    "Проблемы общения"
+                ],
+                "solutions-title": "Предложенные решения",
+                "solution-1-title": "1. Обеспечение поддерживающей рабочей среды",
+                "solution-1-description": "Компаниям следует создать рабочую среду, которая побуждает сотрудников говорить о своих психических проблемах без страха.",
+                "solution-2-title": "2. Программы поддержки психического здоровья",
+                "solution-2-description": "Предложить услуги поддержки психического здоровья, такие как консультирование или семинары по психическому благополучию.",
+                "solution-3-title": "3. Обучение управлению стрессом",
+                "solution-3-description": "Организовать обучающие семинары, чтобы помочь сотрудникам научиться эффективно справляться со стрессом.",
+                "solution-4-title": "4. Содействие эффективному общению",
+                "solution-4-description": "Поощрять сотрудников общаться друг с другом и с HR, чтобы избежать проблем.",
+                "solution-5-title": "5. Поощрять баланс между работой и личной жизнью",
+                "solution-5-description": "Поощрять сотрудников делать перерывы и управлять своим временем, чтобы обеспечить баланс между работой и личной жизнью."
+            },
+            "zh": {
+                "header-title": "员工和人力资源面临的心理问题",
+                "header-description": "心理问题的综合指南",
+                "problems-title": "心理问题",
+                "problems-list": [
+                    "压力和焦虑",
+                    "抑郁",
+                    "心理疲惫",
+                    "缺乏动力",
+                    "沟通问题"
+                ],
+                "solutions-title": "建议的解决方案",
+                "solution-1-title": "1. 提供支持性的工作环境",
+                "solution-1-description": "公司应创建一个工作环境，鼓励员工在没有恐惧的情况下谈论心理健康问题。",
+                "solution-2-title": "2. 心理健康支持计划",
+                "solution-2-description": "提供心理健康支持服务，如咨询或与心理健康相关的研讨会。",
+                "solution-3-title": "3. 压力管理培训",
+                "solution-3-description": "组织培训课程，帮助员工学习如何有效管理压力。",
+                "solution-4-title": "4. 促进有效沟通",
+                "solution-4-description": "鼓励员工彼此之间以及与人力资源进行沟通，以避免问题。",
+                "solution-5-title": "5. 鼓励工作与生活平衡",
+                "solution-5-description": "鼓励员工休息和管理时间，以确保工作与个人生活之间的平衡。"
+            }
+        };
+
+        function changeLanguage() {
+            const language = document.getElementById('language').value;
+
+            const problemsSection = document.querySelector('.problem');
+            const solutionsSection = document.querySelector('.solutions');
+
+            problemsSection.classList.remove('show');
+            solutionsSection.classList.remove('show');
+
+            document.getElementById('header-title').innerText = translations[language]['header-title'];
+            document.getElementById('header-description').innerText = translations[language]['header-description'];
+            document.getElementById('problems-title').innerText = translations[language]['problems-title'];
+
+            const problemsList = document.getElementById('problems-list');
+            problemsList.innerHTML = '';
+            translations[language]['problems-list'].forEach(problem => {
+                const li = document.createElement('li');
+                li.innerText = problem;
+                problemsList.appendChild(li);
+            });
+
+            document.getElementById('solutions-title').innerText = translations[language]['solutions-title'];
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`solution-${i}-title`).innerText = translations[language][`solution-${i}-title`];
+                document.getElementById(`solution-${i}-description`).innerText = translations[language][`solution-${i}-description`];
+            }
+
+            setTimeout(() => {
+                problemsSection.classList.add('show');
+                solutionsSection.classList.add('show');
+            }, 50); 
+
+            setTimeout(() => {
+                problemsSection.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                solutionsSection.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                problemsSection.classList.add('show');
+                solutionsSection.classList.add('show');
+            }, 100); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Relations - PR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* خلفية متدرجة */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #5e35b1; /* لون أرجواني */
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #ff6f20; /* لون برتقالي */
+        }
+        .section-content {
+            opacity: 0; /* اجعلها غير مرئية مسبقًا */
+            transform: translateY(20px); /* حركها إلى الأسفل */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            padding: 10px;
+            color: #666;
+            text-align: left;
+            margin: 10px 0; /* مسافة بين المربعات */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .section-content.active {
+            opacity: 1; /* اجعلها مرئية */
+            transform: translateY(0); /* أعدها إلى موضعها الأصلي */
+        }
+        ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Public Relations - PR</h1>
+        <p id="description">Public Relations (PR) is the art and science of managing communication between an organization and its audience to create a positive image and build trust.</p>
+
+        <label for="languageSelect">Choose Language:</label>
+        <select id="languageSelect" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+        </select>
+
+        <h2 class="section-title" id="objectives">1. Objectives of Public Relations</h2>
+        <div class="section-content" id="objectivesContent">
+            Public Relations aims to establish a mutual understanding between an organization and its audience. The primary objectives of public relations include:
+            <ul>
+                <li>Building a positive public image.</li>
+                <li>Enhancing credibility and trust with the audience.</li>
+                <li>Increasing brand awareness and visibility in the market.</li>
+                <li>Managing crises effectively to minimize negative impact.</li>
+                <li>Creating and maintaining a positive relationship with media outlets.</li>
+                <li>Engaging with the community to foster goodwill.</li>
+                <li>Encouraging stakeholder engagement and participation.</li>
+                <li>Promoting organizational values and social responsibility initiatives.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title" id="importance">2. Importance of Public Relations</h2>
+        <div class="section-content" id="importanceContent">
+            Public relations is a critical part of any organization’s marketing strategy. Its importance can be summarized as follows:
+            <ul>
+                <li><strong>Reputation Management:</strong> PR helps shape and maintain the public's perception of an organization, which is crucial for its long-term success.</li>
+                <li><strong>Crisis Communication:</strong> During crises, effective PR can mitigate damage and help rebuild trust with stakeholders.</li>
+                <li><strong>Audience Engagement:</strong> PR fosters a two-way communication channel between the organization and its audience, encouraging feedback and engagement.</li>
+                <li><strong>Brand Storytelling:</strong> It allows organizations to share their stories and values, making them more relatable and trustworthy.</li>
+                <li><strong>Competitive Advantage:</strong> Strong PR can differentiate an organization from its competitors, helping to establish a unique identity in the market.</li>
+                <li><strong>Community Relations:</strong> Engaging with local communities can enhance goodwill and support for the organization’s initiatives.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title" id="basics">3. Basics of Public Relations</h2>
+        <div class="section-content" id="basicsContent">
+            The fundamentals of PR include several key components:
+            <ul>
+                <li><strong>Strategic Communication:</strong> Developing clear and concise messages that align with organizational goals.</li>
+                <li><strong>Audience Analysis:</strong> Understanding the target audience’s needs, preferences, and behaviors to tailor communication effectively.</li>
+                <li><strong>Media Relations:</strong> Building and maintaining relationships with journalists and media outlets to secure positive coverage.</li>
+                <li><strong>Content Creation:</strong> Crafting engaging content for various platforms, including press releases, social media posts, and newsletters.</li>
+                <li><strong>Event Management:</strong> Organizing events that promote the organization and its objectives while fostering community engagement.</li>
+                <li><strong>Monitoring and Evaluation:</strong> Tracking the effectiveness of PR campaigns through analytics and feedback to improve future strategies.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title" id="keyDefinitions">4. Key Definitions</h2>
+        <div class="section-content" id="keyDefinitionsContent">
+            Public relations can be defined in various ways, emphasizing its multifaceted nature:
+            <ul>
+                <li><strong>Public Relations:</strong> The strategic communication process that builds mutually beneficial relationships between organizations and their publics.</li>
+                <li><strong>Stakeholders:</strong> Individuals or groups that have an interest in the organization, including employees, customers, investors, and the community.</li>
+                <li><strong>Media Relations:</strong> The practice of developing relationships with journalists and other media representatives to facilitate positive coverage.</li>
+                <li><strong>Crisis Management:</strong> A subfield of PR focused on protecting and defending an organization during a public challenge.</li>
+                <li><strong>Corporate Social Responsibility (CSR):</strong> A business model that helps an organization be socially accountable to itself, its stakeholders, and the public.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title" id="uses">5. Uses of Public Relations</h2>
+        <div class="section-content" id="usesContent">
+            Public relations has a wide range of applications across various sectors. Some key uses include:
+            <ul>
+                <li><strong>Media Relations:</strong> Building strong relationships with journalists and influencers to secure positive media coverage.</li>
+                <li><strong>Internal Communications:</strong> Ensuring that employees are informed, engaged, and motivated.</li>
+                <li><strong>Event Management:</strong> Planning and executing events that promote the organization and foster community engagement.</li>
+                <li><strong>Crisis Management:</strong> Developing strategies to handle potential crises that could damage the organization's reputation.</li>
+                <li><strong>Social Media Management:</strong> Engaging with audiences through social media platforms to promote brand visibility.</li>
+                <li><strong>Corporate Social Responsibility:</strong> Promoting initiatives that contribute to social and environmental causes.</li>
+                <li><strong>Product Launches:</strong> Creating buzz and generating interest through targeted public relations campaigns.</li>
+                <li><strong>Community Engagement:</strong> Building relationships with community members and organizations to foster goodwill.</li>
+                <li><strong>Influencer Partnerships:</strong> Collaborating with influencers to reach a wider audience and enhance credibility.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title" id="outcomes">6. Outcomes of Effective Public Relations</h2>
+        <div class="section-content" id="outcomesContent">
+            Effective public relations efforts can yield significant benefits for organizations, including:
+            <ul>
+                <li>Improved brand reputation and image.</li>
+                <li>Increased media coverage and positive publicity.</li>
+                <li>Enhanced customer loyalty and engagement.</li>
+                <li>Better crisis management and reduced impact of negative events.</li>
+                <li>Increased stakeholder trust and support.</li>
+                <li>Greater visibility in the marketplace.</li>
+                <li>Improved employee morale and retention.</li>
+                <li>Stronger community relationships and goodwill.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title" id="examples">7. Examples of Public Relations Initiatives</h2>
+        <div class="section-content" id="examplesContent">
+            There are numerous examples of successful public relations initiatives that have positively impacted organizations. Some notable examples include:
+            <ul>
+                <li>Launching a new product with a targeted media campaign that generated widespread attention.</li>
+                <li>Organizing community outreach programs that foster goodwill and positive relationships.</li>
+                <li>Implementing crisis communication plans that effectively managed public perception during challenging times.</li>
+                <li>Engaging with influencers to promote a brand message through authentic storytelling.</li>
+                <li>Running sustainability campaigns that align with corporate social responsibility goals.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title" id="projects">8. PR Projects in Practice</h2>
+        <div class="section-content" id="projectsContent">
+            Some examples of PR projects in practice include:
+            <ul>
+                <li>Rebranding project for an established company that revitalized its public image and market presence.</li>
+                <li>Community awareness campaign on topics such as health, environment, or education.</li>
+                <li>Training media teams within the organization to enhance communication skills and media relations.</li>
+                <li>Social media outreach to increase engagement and build a loyal online community.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Public Relations - PR",
+                description: "Public Relations (PR) is the art and science of managing communication between an organization and its audience to create a positive image and build trust.",
+                objectives: "1. Objectives of Public Relations",
+                objectivesContent: "Public Relations aims to establish a mutual understanding between an organization and its audience. The primary objectives of public relations include:\n<ul>\n<li>Building a positive public image.</li>\n<li>Enhancing credibility and trust with the audience.</li>\n<li>Increasing brand awareness and visibility in the market.</li>\n<li>Managing crises effectively to minimize negative impact.</li>\n<li>Creating and maintaining a positive relationship with media outlets.</li>\n<li>Engaging with the community to foster goodwill.</li>\n<li>Encouraging stakeholder engagement and participation.</li>\n<li>Promoting organizational values and social responsibility initiatives.</li>\n</ul>",
+                importance: "2. Importance of Public Relations",
+                importanceContent: "Public relations is a critical part of any organization’s marketing strategy. Its importance can be summarized as follows:\n<ul>\n<li><strong>Reputation Management:</strong> PR helps shape and maintain the public's perception of an organization, which is crucial for its long-term success.</li>\n<li><strong>Crisis Communication:</strong> During crises, effective PR can mitigate damage and help rebuild trust with stakeholders.</li>\n<li><strong>Audience Engagement:</strong> PR fosters a two-way communication channel between the organization and its audience, encouraging feedback and engagement.</li>\n<li><strong>Brand Storytelling:</strong> It allows organizations to share their stories and values, making them more relatable and trustworthy.</li>\n<li><strong>Competitive Advantage:</strong> Strong PR can differentiate an organization from its competitors, helping to establish a unique identity in the market.</li>\n<li><strong>Community Relations:</strong> Engaging with local communities can enhance goodwill and support for the organization’s initiatives.</li>\n</ul>",
+                basics: "3. Basics of Public Relations",
+                basicsContent: "The fundamentals of PR include several key components:\n<ul>\n<li><strong>Strategic Communication:</strong> Developing clear and concise messages that align with organizational goals.</li>\n<li><strong>Audience Analysis:</strong> Understanding the target audience’s needs, preferences, and behaviors to tailor communication effectively.</li>\n<li><strong>Media Relations:</strong> Building and maintaining relationships with journalists and media outlets to secure positive coverage.</li>\n<li><strong>Content Creation:</strong> Crafting engaging content for various platforms, including press releases, social media posts, and newsletters.</li>\n<li><strong>Event Management:</strong> Organizing events that promote the organization and its objectives while fostering community engagement.</li>\n<li><strong>Monitoring and Evaluation:</strong> Tracking the effectiveness of PR campaigns through analytics and feedback to improve future strategies.</li>\n</ul>",
+                keyDefinitions: "4. Key Definitions",
+                keyDefinitionsContent: "Public relations can be defined in various ways, emphasizing its multifaceted nature:\n<ul>\n<li><strong>Public Relations:</strong> The strategic communication process that builds mutually beneficial relationships between organizations and their publics.</li>\n<li><strong>Stakeholders:</strong> Individuals or groups that have an interest in the organization, including employees, customers, investors, and the community.</li>\n<li><strong>Media Relations:</strong> The practice of developing relationships with journalists and other media representatives to facilitate positive coverage.</li>\n<li><strong>Crisis Management:</strong> A subfield of PR focused on protecting and defending an organization during a public challenge.</li>\n<li><strong>Corporate Social Responsibility (CSR):</strong> A business model that helps an organization be socially accountable to itself, its stakeholders, and the public.</li>\n</ul>",
+                uses: "5. Uses of Public Relations",
+                usesContent: "Public relations has a wide range of applications across various sectors. Some key uses include:\n<ul>\n<li><strong>Media Relations:</strong> Building strong relationships with journalists and influencers to secure positive media coverage.</li>\n<li><strong>Internal Communications:</strong> Ensuring that employees are informed, engaged, and motivated.</li>\n<li><strong>Event Management:</strong> Planning and executing events that promote the organization and foster community engagement.</li>\n<li><strong>Crisis Management:</strong> Developing strategies to handle potential crises that could damage the organization's reputation.</li>\n<li><strong>Social Media Management:</strong> Engaging with audiences through social media platforms to promote brand visibility.</li>\n<li><strong>Corporate Social Responsibility:</strong> Promoting initiatives that contribute to social and environmental causes.</li>\n<li><strong>Product Launches:</strong> Creating buzz and generating interest through targeted public relations campaigns.</li>\n<li><strong>Community Engagement:</strong> Building relationships with community members and organizations to foster goodwill.</li>\n<li><strong>Influencer Partnerships:</strong> Collaborating with influencers to reach a wider audience and enhance credibility.</li>\n</ul>",
+                outcomes: "6. Outcomes of Effective Public Relations",
+                outcomesContent: "Effective public relations efforts can yield significant benefits for organizations, including:\n<ul>\n<li>Improved brand reputation and image.</li>\n<li>Increased media coverage and positive publicity.</li>\n<li>Enhanced customer loyalty and engagement.</li>\n<li>Better crisis management and reduced impact of negative events.</li>\n<li>Increased stakeholder trust and support.</li>\n<li>Greater visibility in the marketplace.</li>\n<li>Improved employee morale and retention.</li>\n<li>Stronger community relationships and goodwill.</li>\n</ul>",
+                examples: "7. Examples of Public Relations Initiatives",
+                examplesContent: "There are numerous examples of successful public relations initiatives that have positively impacted organizations. Some notable examples include:\n<ul>\n<li>Launching a new product with a targeted media campaign that generated widespread attention.</li>\n<li>Organizing community outreach programs that foster goodwill and positive relationships.</li>\n<li>Implementing crisis communication plans that effectively managed public perception during challenging times.</li>\n<li>Engaging with influencers to promote a brand message through authentic storytelling.</li>\n<li>Running sustainability campaigns that align with corporate social responsibility goals.</li>\n</ul>",
+                projects: "8. PR Projects in Practice",
+                projectsContent: ["Rebranding project for an established company that revitalized its public image and market presence.", "Community awareness campaign on topics such as health, environment, or education.", "Training media teams within the organization to enhance communication skills and media relations.", "Social media outreach to increase engagement and build a loyal online community."]
+            },
+            ar: {
+                title: "العلاقات العامة - PR",
+                description: "العلاقات العامة (PR) هي فن وعلم إدارة الاتصال بين المنظمة وجمهورها لإنشاء صورة إيجابية وبناء الثقة.",
+                objectives: "1. أهداف العلاقات العامة",
+                objectivesContent: "تهدف العلاقات العامة إلى إقامة تفاهم متبادل بين المنظمة وجمهورها. تشمل الأهداف الرئيسية للعلاقات العامة:\n<ul>\n<li>بناء صورة عامة إيجابية.</li>\n<li>تعزيز المصداقية والثقة مع الجمهور.</li>\n<li>زيادة الوعي بالعلامة التجارية ورؤيتها في السوق.</li>\n<li>إدارة الأزمات بشكل فعال لتقليل الأثر السلبي.</li>\n<li>إنشاء والحفاظ على علاقة إيجابية مع وسائل الإعلام.</li>\n<li>التفاعل مع المجتمع لتعزيز goodwill.</li>\n<li>تشجيع المشاركة والانخراط من أصحاب المصلحة.</li>\n<li>تعزيز القيم التنظيمية ومبادرات المسؤولية الاجتماعية.</li>\n</ul>",
+                importance: "2. أهمية العلاقات العامة",
+                importanceContent: "تعتبر العلاقات العامة جزءًا حيويًا من استراتيجية التسويق لأي منظمة. يمكن تلخيص أهميتها في النقاط التالية:\n<ul>\n<li><strong>إدارة السمعة:</strong> تساعد العلاقات العامة في تشكيل والحفاظ على تصورات الجمهور تجاه المنظمة، وهو أمر حاسم لنجاحها على المدى الطويل.</li>\n<li><strong>الاتصالات في الأزمات:</strong> خلال الأزمات، يمكن أن تساعد العلاقات العامة الفعالة في تقليل الأضرار واستعادة الثقة مع أصحاب المصلحة.</li>\n<li><strong>تفاعل الجمهور:</strong> تعزز العلاقات العامة قناة اتصال ثنائية الاتجاه بين المنظمة وجمهورها، مما يشجع على ردود الفعل والانخراط.</li>\n<li><strong>سرد العلامة التجارية:</strong> يسمح للعلاقات العامة للمنظمات بمشاركة قصصها وقيمها، مما يجعلها أكثر قربًا وثقة.</li>\n<li><strong>الميزة التنافسية:</strong> يمكن أن تميز العلاقات العامة القوية المنظمة عن منافسيها، مما يساعد في إقامة هوية فريدة في السوق.</li>\n<li><strong>علاقات المجتمع:</strong> يمكن أن تعزز التفاعل مع المجتمعات المحلية goodwill وتدعم مبادرات المنظمة.</li>\n</ul>",
+                basics: "3. أساسيات العلاقات العامة",
+                basicsContent: "تشمل أساسيات العلاقات العامة العديد من المكونات الرئيسية:\n<ul>\n<li><strong>الاتصال الاستراتيجي:</strong> تطوير رسائل واضحة وموجزة تتماشى مع أهداف المنظمة.</li>\n<li><strong>تحليل الجمهور:</strong> فهم احتياجات الجمهور المستهدف وتفضيلاته وسلوكياته لتخصيص الاتصال بشكل فعال.</li>\n<li><strong>علاقات الإعلام:</strong> بناء وصيانة علاقات مع الصحفيين ووسائل الإعلام لضمان تغطية إيجابية.</li>\n<li><strong>إنشاء المحتوى:</strong> إنشاء محتوى جذاب لمنصات مختلفة، بما في ذلك البيانات الصحفية، ومنشورات وسائل التواصل الاجتماعي، والنشرات الإخبارية.</li>\n<li><strong>إدارة الأحداث:</strong> تنظيم الأحداث التي تعزز المنظمة وأهدافها مع تعزيز التفاعل المجتمعي.</li>\n<li><strong>المراقبة والتقييم:</strong> تتبع فعالية حملات العلاقات العامة من خلال التحليلات وردود الفعل لتحسين الاستراتيجيات المستقبلية.</li>\n</ul>",
+                keyDefinitions: "4. التعريفات الأساسية",
+                keyDefinitionsContent: "يمكن تعريف العلاقات العامة بطرق مختلفة، مما يبرز طبيعتها المتعددة الأوجه:\n<ul>\n<li><strong>العلاقات العامة:</strong> هي عملية الاتصال الاستراتيجي التي تبني علاقات مفيدة للطرفين بين المنظمات وجماهيرها.</li>\n<li><strong>أصحاب المصلحة:</strong> الأفراد أو الجماعات الذين لديهم مصلحة في المنظمة، بما في ذلك الموظفين والعملاء والمستثمرين والمجتمع.</li>\n<li><strong>علاقات الإعلام:</strong> ممارسة بناء علاقات مع الصحفيين وممثلي الإعلام الآخرين لتسهيل التغطية الإيجابية.</li>\n<li><strong>إدارة الأزمات:</strong> مجال فرعي من العلاقات العامة يركز على حماية والدفاع عن المنظمة خلال التحديات العامة.</li>\n<li><strong>المسؤولية الاجتماعية للشركات (CSR):</strong> نموذج عمل يساعد المنظمة على أن تكون مسؤولة اجتماعيًا تجاه نفسها وأصحاب المصلحة والجمهور.</li>\n</ul>",
+                uses: "5. استخدامات العلاقات العامة",
+                usesContent: "تتمتع العلاقات العامة بمجموعة واسعة من التطبيقات عبر مختلف القطاعات. تشمل بعض الاستخدامات الرئيسية:\n<ul>\n<li><strong>علاقات الإعلام:</strong> بناء علاقات قوية مع الصحفيين والمؤثرين لضمان تغطية إعلامية إيجابية.</li>\n<li><strong>الاتصالات الداخلية:</strong> ضمان أن يكون الموظفون مطلعين ومتفاعلين ومحفزين.</li>\n<li><strong>إدارة الأحداث:</strong> التخطيط وتنفيذ الأحداث التي تعزز المنظمة وتعزز التفاعل المجتمعي.</li>\n<li><strong>إدارة الأزمات:</strong> تطوير استراتيجيات للتعامل مع الأزمات المحتملة التي قد تضر بسمعة المنظمة.</li>\n<li><strong>إدارة وسائل التواصل الاجتماعي:</strong> التفاعل مع الجمهور من خلال منصات وسائل التواصل الاجتماعي لتعزيز رؤية العلامة التجارية.</li>\n<li><strong>المسؤولية الاجتماعية للشركات:</strong> تعزيز المبادرات التي تساهم في القضايا الاجتماعية والبيئية.</li>\n<li><strong>إطلاق المنتجات:</strong> إنشاء ضجة وجذب اهتمام الجمهور من خلال حملات العلاقات العامة المستهدفة.</li>\n<li><strong>التفاعل المجتمعي:</strong> بناء علاقات مع أعضاء المجتمع والمنظمات لتعزيز goodwill.</li>\n<li><strong>شراكات المؤثرين:</strong> التعاون مع المؤثرين للوصول إلى جمهور أوسع وزيادة المصداقية.</li>\n</ul>",
+                outcomes: "6. نتائج العلاقات العامة الفعالة",
+                outcomesContent: "يمكن أن تحقق جهود العلاقات العامة الفعالة فوائد كبيرة للمنظمات، بما في ذلك:\n<ul>\n<li>تحسين سمعة العلامة التجارية وصورتها.</li>\n<li>زيادة التغطية الإعلامية والدعاية الإيجابية.</li>\n<li>تعزيز ولاء العملاء وتفاعلهم.</li>\n<li>تحسين إدارة الأزمات وتقليل تأثير الأحداث السلبية.</li>\n<li>زيادة الثقة والدعم من أصحاب المصلحة.</li>\n<li>زيادة الرؤية في السوق.</li>\n<li>تحسين معنويات الموظفين والاحتفاظ بهم.</li>\n<li>تعزيز العلاقات المجتمعية والـ goodwill.</li>\n</ul>",
+                examples: "7. أمثلة على مبادرات العلاقات العامة",
+                examplesContent: "هناك العديد من الأمثلة على مبادرات العلاقات العامة الناجحة التي أثرت إيجابًا على المنظمات. تشمل بعض الأمثلة البارزة:\n<ul>\n<li>إطلاق منتج جديد بحملة إعلامية مستهدفة ولدت اهتمامًا واسعًا.</li>\n<li>تنظيم برامج توعية مجتمعية تعزز goodwill والعلاقات الإيجابية.</li>\n<li>تنفيذ خطط الاتصال في الأزمات التي أدارت التصورات العامة بشكل فعال خلال الأوقات الصعبة.</li>\n<li>التفاعل مع المؤثرين للترويج لرسالة العلامة التجارية من خلال سرد القصص الأصيلة.</li>\n<li>تشغيل حملات الاستدامة التي تتماشى مع أهداف المسؤولية الاجتماعية للشركات.</li>\n</ul>",
+                projects: "8. مشاريع العلاقات العامة في الممارسة العملية",
+                projectsContent: ["مشروع إعادةbranding لشركة راسخة أعاد تنشيط صورتها العامة وحضورها في السوق.", "حملة توعية مجتمعية حول مواضيع مثل الصحة أو البيئة أو التعليم.", "تدريب فرق الإعلام داخل المنظمة لتعزيز مهارات الاتصال وعلاقات الإعلام.", "التواصل عبر وسائل التواصل الاجتماعي لزيادة التفاعل وبناء مجتمع مخلص."]
+            }
+        };
+
+        function changeLanguage(language) {
+            const title = document.getElementById("title");
+            const description = document.getElementById("description");
+            const objectives = document.getElementById("objectives");
+            const objectivesContent = document.getElementById("objectivesContent");
+            const importance = document.getElementById("importance");
+            const importanceContent = document.getElementById("importanceContent");
+            const basics = document.getElementById("basics");
+            const basicsContent = document.getElementById("basicsContent");
+            const keyDefinitions = document.getElementById("keyDefinitions");
+            const keyDefinitionsContent = document.getElementById("keyDefinitionsContent");
+            const uses = document.getElementById("uses");
+            const usesContent = document.getElementById("usesContent");
+            const outcomes = document.getElementById("outcomes");
+            const outcomesContent = document.getElementById("outcomesContent");
+            const examples = document.getElementById("examples");
+            const examplesContent = document.getElementById("examplesContent");
+            const projects = document.getElementById("projects");
+            const projectsContent = document.getElementById("projectsContent");
+
+            title.innerHTML = translations[language].title;
+            description.innerHTML = translations[language].description;
+            objectives.innerHTML = translations[language].objectives;
+            objectivesContent.innerHTML = translations[language].objectivesContent;
+            importance.innerHTML = translations[language].importance;
+            importanceContent.innerHTML = translations[language].importanceContent;
+            basics.innerHTML = translations[language].basics;
+            basicsContent.innerHTML = translations[language].basicsContent;
+            keyDefinitions.innerHTML = translations[language].keyDefinitions;
+            keyDefinitionsContent.innerHTML = translations[language].keyDefinitionsContent;
+            uses.innerHTML = translations[language].uses;
+            usesContent.innerHTML = translations[language].usesContent;
+            outcomes.innerHTML = translations[language].outcomes;
+            outcomesContent.innerHTML = translations[language].outcomesContent;
+            examples.innerHTML = translations[language].examples;
+            examplesContent.innerHTML = translations[language].examplesContent;
+            projects.innerHTML = translations[language].projects;
+            projectsContent.innerHTML = translations[language].projectsContent.join('</li><li>');
+        }
+
+        window.onload = function () {
+            // إضافة التأثيرات الديناميكية عند تحميل الصفحة
+            const contents = document.querySelectorAll('.section-content');
+            setTimeout(() => {
+                contents.forEach(content => {
+                    content.classList.add('active');
+                });
+            }, 100);  // تأخير بسيط قبل إضافة التأثيرات
+        };
+    </script>
+</body>
+</html>

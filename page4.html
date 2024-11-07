@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Relations Library</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Style */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards ease-in-out;
+        }
+
+        /* Animation for page load */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-30px);
+            animation: slideDown 1s forwards ease-in-out;
+        }
+
+        /* Animation for header load */
+        @keyframes slideDown {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #ffdd00;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Section Styles */
+        section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            animation: scaleUp 1s forwards ease-in-out;
+        }
+
+        /* Animation for sections */
+        @keyframes scaleUp {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            color: #ffdd00;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Link Style */
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Link hover effect with bounce */
+        a:hover {
+            color: #ffdd00;
+            transform: scale(1.1);
+            animation: bounce 0.4s;
+        }
+
+        /* Animation for link bounce */
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Video Style */
+        .video-container {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-frame {
+            width: 100%;
+            max-width: 700px;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+            background: rgba(0, 0, 0, 0.5);
+            color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(30px);
+            animation: slideUp 1s forwards ease-in-out;
+        }
+
+        /* Animation for footer load */
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Public Relations Library</h1>
+    </header>
+
+    <section id="resources">
+        <h2>Get paid books and articles for free from here!</h2>
+        <ul>
+            <li><a href="https://www.mediafire.com/file/p9kc5bgx1r74qqa/Aoife_O%2527Donnell_-_Public_Relations_and_Communications__From_Theory_to_Practice-Routledge_%25282023%2529.pdf/file" target="_blank">Public relations and communications</a></li>
+            <li><a href="https://www.mediafire.com/file/utjc44fr4ttyuy5/Ralph_Tench%252C_Stephen_Waddington_-_Exploring_Public_Relations_and_Management_Communication-Pearson_Education_%25282020%2529.pdf/file" target="_blank">Exploring public relations in management</a></li>
+            <li><a href="https://www.mediafire.com/file/aco0l791vtg2pr8/Dennis_L._Wilcox__Glen_T._Cameron__Bryan_H._Reber_-_Public_Relations__Strategies_and_Tactics-Pearson_%25282014%2529.pdf/file" target="_blank">Public relations strategies and tactics</a></li>
+        </ul>
+    </section>
+
+    <section id="videos">
+        <h2>Educational Videos</h2>
+        <div class="video-container">
+            <iframe class="video-frame" src="https://www.youtube.com/embed/videoseries?list=PL-0z9E7tPE1uESJBBukUN4wQi5PK6A9KA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe class="video-frame" src="https://www.youtube.com/embed/3ltKIDUJ2nQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe class="video-frame" src="https://www.youtube.com/embed/YO-GnvISAeA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe class="video-frame" src="https://www.youtube.com/embed/W62uK6uqWgE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Public Relations Library</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll("section");
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.5}s`;
+            });
+            console.log("Page is fully loaded with animations!");
+        });
+    </script>
+</body>
+</html>
